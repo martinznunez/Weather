@@ -1,13 +1,319 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8cf61;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container-nav {
+  background-color: #f36b7f;
+  height: 100px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.titulo-nav {
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.hamburger img {
+  width: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.container-hamburger {
+  margin-right: 10px;
+}
+
+.card {
+  position: absolute;
+  margin-top: 20px;
+  width: 100px;
+
+  margin-left: -40px;
+}
+
+.card p {
+  width: 100px;
+  font-weight: 200;
+  font-size: 1.3rem;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.container-footer {
+  background-color: #f36b7f;
+  height: 140px;
+}
+
+.container-footer p {
+  text-align: center;
+  padding-top: 30px;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.c-checkbox {
+  display: none;
+}
+.c-checkbox:checked + .c-formContainer .c-form {
+  width: 400px;
+}
+.c-checkbox:checked + .c-formContainer .c-form__toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.c-checkbox:checked + .c-formContainer .c-form__input,
+.c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+  transition: 0.2s 0.1s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.c-checkbox:not(:checked)
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle::before,
+.c-checkbox:checked
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle::before {
+  content: "Thank You! \1F60A";
+}
+.c-checkbox:not(:checked)
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle {
+  pointer-events: none;
+  cursor: default;
+}
+.c-formContainer,
+.c-form,
+.c-form__toggle {
+  width: 20em;
+  height: 4.25em;
+}
+.c-formContainer {
+  position: relative;
+  font-weight: 700;
+}
+.c-form,
+.c-form__toggle {
+  position: absolute;
+  border-radius: 6.25em;
+  background-color: white;
+  transition: 0.2s;
+}
+.c-form {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.625em;
+  box-sizing: border-box;
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+.c-form__toggle {
+  color: salmon;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-form__toggle::before {
+  font-size: 1.3em;
+  content: attr(data-title);
+}
+
+.c-form__input,
+.c-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 5em;
+  box-sizing: border-box;
+}
+.c-form__button {
+  cursor: pointer;
+}
+
+.c-form__button:focus {
+  background-color: yellow;
+}
+.c-form__input,
+.c-form__buttonLabel {
+  font-size: 1.2em;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0s;
+}
+.c-form__input {
+  color: your-pink;
+  height: 100%;
+  width: 100%;
+  padding: 0 0.714em;
+}
+.c-form__input::placeholder {
+  color: currentColor;
+}
+.c-form__input:required:valid {
+  color: salmon;
+}
+.c-form__input:required:valid + .c-form__buttonLabel {
+  color: white;
+}
+.c-form__input:required:valid + .c-form__buttonLabel::before {
+  pointer-events: initial;
+}
+.c-form__buttonLabel {
+  color: cornflower-lilac;
+  height: 100%;
+  width: auto;
+}
+.c-form__buttonLabel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  cursor: pointer;
+}
+.c-form__button {
+  color: inherit;
+  padding: 0;
+  height: 100%;
+  width: 5em;
+  background-color: salmon;
+}
+
+.container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.container-fecha {
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  background-color: rgb(123, 177, 250);
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 5px;
+  margin-top: 30px;
+}
+.titulo-fecha {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+.texto-fecha {
+  color: #f8cf61;
+  font-size: 1.2rem;
+}
+
+.container-clima-dia {
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  background-color: rgb(123, 177, 250);
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 500px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.container-clima-dia h3 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.container-semana-pronostico {
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  background-color: rgb(123, 177, 250);
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 300px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.parrafo-descripcion-fecha {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #f8cf61;
+}
+
+.temp-max-min {
+  font-weight: 700;
+  color: #f8cf61;
+}
+
+.container-error {
+  background-color: yellow;
+  padding: 10px;
+  text-align: center;
+}
+.container-error p {
+  font-size: 2rem;
+}
+
+.container-loading {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 60px;
+  align-items: center;
+}
+.container-mensaje-busqueda {
+  background-color: red;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.container-mensaje-busqueda p {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.3rem;
 }
