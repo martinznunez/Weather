@@ -9,4 +9,5 @@ In the project directory, you can run:
 ### `npm start`
 
 Para probar el proyecto localmente npm i y crear un archivo en la raiz .env con la variable REACT_APP_API_KEY y tu api key del clima
-https://raw.githubusercontent.com/martinznunez/Weather/master/assets/pantalla01.png
+
+<img src="/assets/pantalla01.png" alt=""/>
