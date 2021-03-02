@@ -10,4 +10,4 @@ In the project directory, you can run:
 
 Para probar el proyecto localmente npm i y crear un archivo en la raiz .env con la variable REACT_APP_API_KEY y tu api key del clima
 
-<img src="/assets/pantalla01.png" alt=""/>
+<img src="assets/pantalla01.png" alt=""/>
